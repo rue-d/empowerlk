@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home Page</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta name="description" content="homepage">
+        <script src="https://kit.fontawesome.com/d5cb29f274.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style/contact.css">
+        <link rel="stylesheet" href="style/navbar.css">
+    </head>
+    <body>
+        <header>
+         <a href="#" class="logo">EMPOWERLK</a>
+         <div class="group">
+            <ul class="navigation">
+                li><a href="homeDis.html">Home</a></li>
+                <li><a href="#">Activity</a></li>
+                <li><a href="chatDis.html">Chat</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="search">
+               <span class="icon">
+                  <ion-icon name="search-outline" class="searchBtn"></ion-icon>
+                  <ion-icon name="close-outline" class="closeBtn"></ion-icon>
+               </span>
+            </div>
+            <ion-icon name="menu-outline" class="menuToggle"></ion-icon>
+         </div>
+         <div class="searchBox">
+            <input type="text" placeholder="Search..">
+         </div>
+        </header>
+
+        <div class="contact">
+            <h1>Contact Us</h1>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1980.303564821405!2d79.84963915789581!3d6.937468561320322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25921cdcc9697%3A0xd14cc76532cd031c!2s123%20Main%20St%2C%20Colombo%2001100!5e0!3m2!1sen!2slk!4v1678421497851!5m2!1sen!2slk" 
+                    width= "90%" 
+                    height="450" 
+                    style="border:0;" a
+                    llowfullscreen="" 
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <ul>
+                <li><strong>Address:</strong> 123 Main Street, Colombo, Sri Lanka</li>
+                <li><strong>Phone:</strong> +94 11 1234567</li>
+            </ul>
+            <div class="form">
+                <p>Want to report an issue?</p>
+                <form action="#" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your name.." required>
+
+                    <label for="username">Username:</label>
+                    <input type="text" id="Username" name="Username" placeholder="Username.." required>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" id="phone" name="phone" placeholder="Your phone number.." required>
+          
+                    <label for="email">Email Address:</label>
+                    <input type="text" id="email" name="email" placeholder="Your email.." required>
+          
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" placeholder="Subject.." required>
+          
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Write your message here.." style="height:200px" required></textarea>
+          
+                    <button type="submit">Submit</button>
+                  </form>
+            </div>
+        </div>
+
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+      <script>
+         let searchBtn = document.querySelector('.searchBtn');
+         let closeBtn = document.querySelector('.closeBtn');
+         let searchBox = document.querySelector('.searchBox');
+
+         let navigation = document.querySelector('navigation');
+         let menuToggle = document.querySelector('menuToggle');
+         let header = document.querySelector('header');
+
+         searchBtn.onclick = function(){
+            searchBox.classList.add('active');
+            closeBtn.classList.add('active');
+            searchBtn.classList.add('active');
+            menuToggle.classList.add('hide');
+            header.classList.remove('open');
+         }
+
+         closeBtn.onclick = function(){
+            searchBox.classList.remove('active');
+            closeBtn.classList.remove('active');
+            searchBtn.classList.remove('active');
+            menuToggle.classList.remove('hide');
+         }
+
+         menuToggle.onclick = function(){
+            header.classList.toggle('open');
+            searchBox.classList.remove('active');
+            closeBtn.classList.remove('active');
+            searchBtn.classList.remove('active');
+         }
+      </script>
+    </body>
+</html>
